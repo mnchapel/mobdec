@@ -1,0 +1,78 @@
+%YAML:1.0
+
+
+
+project: "coupled_2D_and_3D_analysis_for_moving_objects_detection_with_a_moving_camera"
+
+
+
+%----------
+% General
+%----------
+start_time: 0
+end_time: 50
+delta: 4
+nb_max_points: 8000
+mobdec_data_path: "/home/mnchapel/mnchapel/development/mobdec/results/"
+template_image_path: "/home/mnchapel/mnchapel/data/jpg_files/people1/people1_%02d.jpg"
+
+
+
+%----------
+% LdofOptF
+%----------
+ldof_subsampling_factor: 8
+
+
+
+%-----------------------------------
+% DeleteFeaturePointWithGroundTruth
+%-----------------------------------
+template_gt_image_path: "/home/mnchapel/mnchapel/data/jpg_files/people1_gt/gt_people1_%02d.jpg"
+
+
+%-----------------
+% EssentialMatrix
+%-----------------
+intrinsic_parameters: "/home/mnchapel/mnchapel/data/intrinsic_parameters/intrinsic_people1.yml"
+
+
+
+%----------------------
+% LabelingFeaturePoint
+%----------------------
+label_cv_on_threshold: 0.2
+nb_frame_accumulation: 3
+percent_pc_to_be_static: 0.4
+max_ptp_error_static: 0.1
+max_ptp_error_moving: 0.4
+
+
+
+%-------
+% Scale
+%-------
+scale_max_distance: 1.
+scale_nb_sample_point: 500
+
+
+
+%--------
+% Cycles
+%--------
+cycle:
+  initialization:
+    end: 4
+    module: [LdofOptF, DeleteFeaturePointWithGroundTruth, LabelingStaticInitialisation, EssentialMatrix, Reconstruction3dTriangulation, ScaleInBox]
+  process:
+    end: 50
+    module: [LdofOptF, EssentialMatrix, Reconstruction3dTriangulation, Scale, LabelingFeaturePoint, FalseNegativeSuppression]
+
+
+
+
+
+
+
+
+
