@@ -2,9 +2,9 @@
 
 MoBDec (pronounced as Moby Dick) - for Moving Objects Detection - is the code that I use for my research experimentations.
 My current configuration on Linux:
-- GCC 6.3
+- GCC 7.2
 - OpenCV 3.3 with Opencv Contrib and CUDA 8.0.
-- libldof_gpu.so from https://lmb.informatik.uni-freiburg.de/resources/binaries/, "Large Displacement Optical Flow" part.
+- libldof_gpu.so from https://lmb.informatik.uni-freiburg.de/resources/binaries/, "Large Displacement Optical Flow" part. Need CUDA 7.5.
 
 # Build - Linux
 ```shell

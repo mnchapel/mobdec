@@ -108,7 +108,7 @@ public:
 	/// @brief Add a new feature point.
 	///
 	/// @param position_2d: the 2d position of the feature point in the current image.
-	void addNewFeaturePoint(cv::Mat& position_2d) noexcept;
+    void addNewFeaturePoint(cv::Mat& position_2d) noexcept;
 
 
 
@@ -280,10 +280,7 @@ public:
 	/// @param id:
 	///
 	/// @return
-	std::vector<cv::Mat>::const_iterator getFeaturePointPosition2DAtT(uint id) const noexcept;
-
-	// TODO remove
-	std::vector<cv::Mat>::const_iterator testFunc(uint id) const noexcept;
+    std::vector<cv::Mat>::const_iterator getFeaturePointPosition2DAtT(uint id) const noexcept;
 
 
 

@@ -235,7 +235,7 @@ private:
 
 
 template<>
-inline std::string Settings::operator()<std::string>(cst key) const
+inline std::string Settings::operator()(cst key) const
 {
 	MVariant mv = value[cst2int(key)];
     return (std::string)mv;

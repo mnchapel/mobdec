@@ -22,6 +22,7 @@ include_directories(${OpenCV_INCLUDE_DIRS} "${CMAKE_SOURCE_DIR}/src/")
 
 set(LIBS
     ${LIBS}
+    ${CUDA_LIBRARY}
     "ldof_gpu"
     "opencv_core"
     "opencv_highgui"
@@ -36,6 +37,9 @@ set(LIBS
 
 file(GLOB_RECURSE SRC src/*/*.cpp)
 file(GLOB_RECURSE HDR src/*/*.h)
-add_executable(mobdec ${SRC} ${HDR}) # add HDR to executable to show them in the project explorer of qt creator
 
+add_executable(mobdec ${SRC} ${HDR}) # add HDR to executable to show them in the project explorer of qt creator
+target_link_libraries(mobdec ${LIBS})
+
+add_library(libmobdec ${SRC} ${HDR})
 target_link_libraries(mobdec ${LIBS})

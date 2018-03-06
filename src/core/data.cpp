@@ -29,7 +29,7 @@ void Data::addNewFeaturePoint(cv::Mat& position_2d) noexcept
 
 	assert(free_index != uint(-1));
 
-	feature_point[free_index] = FeaturePoint(position_2d);
+    feature_point.at(free_index) = std::move(FeaturePoint(position_2d));
 }
 
 
@@ -159,15 +159,6 @@ cv::Mat Data::getFeaturePointOpticalFlowTMDelta(uint index) const noexcept
 std::vector<cv::Mat>::const_iterator Data::getFeaturePointPosition2DAtT(uint id) const noexcept
 {
 	return feature_point[id].get2DPositionAtT();
-}
-
-
-
-// TODO remove
-//---------------------------------------------------------------------------------------
-std::vector<cv::Mat>::const_iterator Data::testFunc(uint id) const noexcept
-{
-	return feature_point[id].testFunc();
 }
 
 

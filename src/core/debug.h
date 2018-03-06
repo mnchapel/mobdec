@@ -6,7 +6,7 @@
 
 #pragma once
 
-#ifdef NDEBUG
+#ifndef NDEBUG
 	#define DEBUG_MSG(str) do { std::cout << str << std::endl; } while(false)
 	#define DEBUG_COMPONENT_MSG(str) do { std::cout << "\t" << str << std::endl; } while (false)
 	//#define DEBUG_WRITE_RES() do {}
