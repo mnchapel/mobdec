@@ -1,5 +1,5 @@
 /// @file   ldofDetector.cpp
-/// @author Marie-Neige Chapel
+/// @author Narayanan Sundaram and Thomas Brox from https://lmb.informatik.uni-freiburg.de/resources/binaries/
 /// @date   2017/10/18
 
 

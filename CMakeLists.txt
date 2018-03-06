@@ -22,7 +22,7 @@ include_directories(${OpenCV_INCLUDE_DIRS} "${CMAKE_SOURCE_DIR}/src/")
 
 set(LIBS
     ${LIBS}
-    "ldof"
+    "ldof_gpu"
     "opencv_core"
     "opencv_highgui"
     "opencv_ml"
