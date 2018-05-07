@@ -77,7 +77,7 @@ void Settings::parse(std::string settings_file_path) noexcept
 
 	// GENERAL
 	value[cst2int(cst::PROJECT_NAME)]			= convFileNodeToMVariant(fs["project"]);
-	value[cst2int(cst::MOBDEC_DATA_PATH)]		= convFileNodeToMVariant(fs["mobdec_data_path"]);
+    value[cst2int(cst::MOBDEC_RESULT_PATH)]		= MVariant(std::string("../result"));  //convFileNodeToMVariant(fs["mobdec_data_path"]);
 	value[cst2int(cst::TEMPLATE_IMAGE_PATH)]	= convFileNodeToMVariant(fs["template_image_path"]);
 	value[cst2int(cst::TEMPLATE_GT_IMAGE_PATH)]	= convFileNodeToMVariant(fs["template_gt_image_path"]);
 

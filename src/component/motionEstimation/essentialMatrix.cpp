@@ -130,44 +130,13 @@ bool EssentialMatrix::isEnoughTimeElapsed() const noexcept
 void EssentialMatrix::getStaticFeaturePoint(std::vector<cv::Point2d>& static_feature_point_t,
 											std::vector<cv::Point2d>& static_feature_point_tmdelta) const noexcept
 {
-//    auto static_point_index_begin = data->getStaticPointIndexBegin();
-//    auto static_point_index_end = data->getStaticPointIndexEnd();
     std::vector<uint> static_feature_point = data->getStaticPointIndex();
 
-//    for(int i=0; i<NB_MAX_POINT; i++)
-//    {
-//        if(!data->isFeaturePointOld(i)
-//         ||!data->isFeaturePointStatic(i))
-//            continue;
-//
-//        if(!isTooNearToOtherFeaturePoint(i))
-//        	feature_point_static_id.push_back(i);
-//    }
-
-//    assert(feature_point_static_id.size()>6);
-
-//    std::cout << "total static point " << feature_point_static_id.size() << std::endl;
-
-
-//    static_feature_point.push_back(962);
-//    static_feature_point.push_back(4381);
-//    static_feature_point.push_back(4629);
-//    static_feature_point.push_back(804);
-//    static_feature_point.push_back(3059);
-//    static_feature_point.push_back(3903);
-
-//    uint nb_point = 6;
-//    std::cout << "nb point static " << nb_point << std::endl;
-//    random_unique(static_feature_point.begin(), static_feature_point.end(), nb_point);
-
-//	for(size_t i=0; i<nb_point; i++)
     for(int i=0; i<static_feature_point.size(); i++)
 	{
 		uint feature_point_id = static_feature_point[i];
 		if(!data->isFeaturePointOpticalFlowOld(feature_point_id))
-			continue;
-
-//		assert(!data->hasTMDeltaMatching(feature_point_id));
+            continue;
 
 		cv::Point2f point_t(*(data->getFeaturePointPosition2DAtT(feature_point_id)));
 		cv::Point2f point_tmdelta(data->getFeaturePointPosition2DAtTMDelta(feature_point_id));

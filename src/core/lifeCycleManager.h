@@ -15,7 +15,10 @@
 // MoBDec
 #include <component/clustering/kmeansOpticalFlow.h>
 #include <component/featureDetector/deleteFeaturePointWithGroundTruth.h>
+#include <component/featureDetector/anmsDetector.h>
+#include <component/featureDetector/fastdetector.h>
 #include <component/featureDetector/ldofDetector.h>
+#include <component/featureTracker/kltTracker.h>
 #include <component/labeling/combiningGeometricConstraintOpticalFlow.h>
 #include <component/labeling/falseNegativeSuppression.h>
 #include <component/labeling/labelingFeaturePoint.h>

@@ -206,7 +206,7 @@ bool LdofOptF::readMiddlebury(const char* aFilename, CTensor<float>& aFlow) noex
     FILE *stream = fopen(aFilename, "rb");
     if (stream == 0)
     {
-        std::cerr << "\t\tCould not open " << aFilename << std::endl;
+        std::cerr << "\tCould not open " << aFilename << std::endl;
         return false;
     }
 
@@ -276,6 +276,7 @@ void LdofOptF::updateTracks(uint size_x,
         if(!data->isFeaturePoint(i))
         	continue;
 
+
         float ax, ay;
         ax = data->getFeaturePointPosition2DAtTM1(i).at<double>(0);
         ay = data->getFeaturePointPosition2DAtTM1(i).at<double>(1);
@@ -309,7 +310,7 @@ void LdofOptF::updateTracks(uint size_x,
         count++;
     }
 
-    DEBUG_COMPONENT_MSG("count up " << count);
+    DEBUG_COMPONENT_MSG("Nb feature points updated: " << count);
 }
 
 
@@ -381,9 +382,9 @@ void LdofOptF::computeOpticalFlow(const unsigned int subsampling_factor) noexcep
     // Compute bidirectional LDOF or read from file when available
     CTensor<float> forward, backward;
     sprintf(buffer,"ForwardFlow%03d.flo",data->getTime());
-    std::string name1 = CST(std::string,cst::MOBDEC_DATA_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + getComponentName() + "/" + buffer;
+    std::string name1 = CST(std::string,cst::MOBDEC_RESULT_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + getComponentName() + "/" + buffer;
     sprintf(buffer,"BackwardFlow%03d.flo",data->getTime());
-    std::string name2 = CST(std::string,cst::MOBDEC_DATA_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + getComponentName() + "/" + buffer;
+    std::string name2 = CST(std::string,cst::MOBDEC_RESULT_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + getComponentName() + "/" + buffer;
 
     if(readMiddlebury(name1.c_str(), forward) == false || readMiddlebury(name2.c_str(), backward) == false)
     {
@@ -475,7 +476,7 @@ void LdofOptF::computeOpticalFlow(const unsigned int subsampling_factor) noexcep
         }
     }
 
-	DEBUG_COMPONENT_MSG("count new " << count);
+    DEBUG_COMPONENT_MSG("Nb new feature points: " << count);
 
     delete image1;
     delete image2;

@@ -14,7 +14,7 @@ namespace utils {
 //---------------------------------------------------------------------------------------
 uint indexAtT(uint val) noexcept
 {
-    return val%CST(int,cst::NB_ROWS);
+    return (val-1)%CST(int,cst::NB_ROWS);
 }
 
 
@@ -22,7 +22,7 @@ uint indexAtT(uint val) noexcept
 //---------------------------------------------------------------------------------------
 uint indexAtTM1(uint val) noexcept
 {
-    return (val+CST(int,cst::NB_ROWS)-1)%CST(int,cst::NB_ROWS);
+    return (val-1+CST(int,cst::NB_ROWS)-1)%CST(int,cst::NB_ROWS);
 }
 
 
@@ -30,7 +30,7 @@ uint indexAtTM1(uint val) noexcept
 //---------------------------------------------------------------------------------------
 uint indexAtTMDelta(uint val) noexcept
 {
-    return (val+1)%CST(int,cst::NB_ROWS);
+    return val%CST(int,cst::NB_ROWS);
 }
 
 

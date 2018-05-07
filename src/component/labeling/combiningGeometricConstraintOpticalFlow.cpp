@@ -407,7 +407,7 @@ std::vector<uint>::iterator CombiningGeometricConstraintOpticalFlow::random_uniq
 void CombiningGeometricConstraintOpticalFlow::readClusterFile(std::vector<std::vector<uint>>& cluster_feature_point_id_list) noexcept
 {
     char buffer[500];
-    std::string path = CST(std::string,cst::MOBDEC_DATA_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + getComponentName() + "/cluster_%03d.txt";
+    std::string path = CST(std::string,cst::MOBDEC_RESULT_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + getComponentName() + "/cluster_%03d.txt";
     sprintf(buffer, path.c_str(), data->getTime());
 
     std::ifstream file;

@@ -593,7 +593,7 @@ void SuperPixelSegmentation::paintSlicSuperPixelContourWithConfidenceValue(uint 
     }
 
     char buffer[500];
-    std::string path = CST(std::string,cst::MOBDEC_DATA_PATH)
+    std::string path = CST(std::string,cst::MOBDEC_RESULT_PATH)
     				 + "/" + CST(std::string,cst::PROJECT_NAME)
 					 + "/" + getComponentName()
 					 + "/sub_image_%03d_cluster_%03d.png";

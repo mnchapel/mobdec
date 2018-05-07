@@ -68,7 +68,7 @@ void DataWriter::paintCluster(const Data* data,
 	}
 
     char buffer[500];
-    std::string path = CST(std::string,cst::MOBDEC_DATA_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/cluster_convex_hull_%03d.png";
+    std::string path = CST(std::string,cst::MOBDEC_RESULT_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/cluster_convex_hull_%03d.png";
     sprintf(buffer, path.c_str(), data->getTime());
     cv::imwrite(buffer, current_image);
 }
@@ -104,7 +104,7 @@ void DataWriter::paintConfidenceValue(const Data* data,
     }
 
     char buffer[500];
-    std::string path = CST(std::string,cst::MOBDEC_DATA_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/confidence_value_%03d.png";
+    std::string path = CST(std::string,cst::MOBDEC_RESULT_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/confidence_value_%03d.png";
     sprintf(buffer, path.c_str(), data->getTime());
     cv::imwrite(buffer, current_image);
 }
@@ -132,7 +132,7 @@ void DataWriter::paintFeaturePoint(const Data* data,
     }
 
     char buffer[500];
-    std::string path = CST(std::string,cst::MOBDEC_DATA_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/feature_point_%03d.png";
+    std::string path = CST(std::string,cst::MOBDEC_RESULT_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/feature_point_%03d.png";
     sprintf(buffer, path.c_str(), data->getTime());
     cv::imwrite(buffer, current_image);
 }
@@ -160,7 +160,7 @@ void DataWriter::paintKMeansCluster(const Data* data,
     }
 
     char buffer[500];
-    std::string path = CST(std::string,cst::MOBDEC_DATA_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/kmeans_cluster_%03d.png";
+    std::string path = CST(std::string,cst::MOBDEC_RESULT_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/kmeans_cluster_%03d.png";
     sprintf(buffer, path.c_str(), data->getTime());
     cv::imwrite(buffer, current_image);
 }
@@ -183,7 +183,7 @@ void DataWriter::paintKMeansClusterCenters(const Data* data,
     }
 
     char buffer[500];
-    std::string path = CST(std::string,cst::MOBDEC_DATA_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/kmeans_centers_%03d.png";
+    std::string path = CST(std::string,cst::MOBDEC_RESULT_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/kmeans_centers_%03d.png";
     sprintf(buffer, path.c_str(), data->getTime());
     cv::imwrite(buffer, current_image);
 }
@@ -221,7 +221,7 @@ void DataWriter::paintOpticalFlow(const Data* data,
     }
 
     char buffer[500];
-    std::string path = CST(std::string,cst::MOBDEC_DATA_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/optical_flow_%03d.png";
+    std::string path = CST(std::string,cst::MOBDEC_RESULT_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/optical_flow_%03d.png";
     sprintf(buffer, path.c_str(), data->getTime());
     cv::imwrite(buffer, current_image);
 }
@@ -304,7 +304,7 @@ void DataWriter::paintSlicSuperPixelContour(const Data* data,
     }
 
     char buffer[500];
-    std::string path = CST(std::string,cst::MOBDEC_DATA_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/super_pixel_%03d.png";
+    std::string path = CST(std::string,cst::MOBDEC_RESULT_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/super_pixel_%03d.png";
     sprintf(buffer, path.c_str(), data->getTime());
     cv::imwrite(buffer, current_image);
 }
@@ -402,7 +402,7 @@ void DataWriter::paintSlicSuperPixelContourWithConfidenceValue(const Data* data,
     }
 
     char buffer[500];
-    std::string path = CST(std::string,cst::MOBDEC_DATA_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/super_pixel_confidence_value_%03d.png";
+    std::string path = CST(std::string,cst::MOBDEC_RESULT_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/super_pixel_confidence_value_%03d.png";
     sprintf(buffer, path.c_str(), data->getTime());
     cv::imwrite(buffer, current_image);
 }
@@ -472,7 +472,7 @@ void DataWriter::paintSlicSuperPixelRegionWithConfidenceValue(const Data* data,
     }
 
     char buffer[500];
-    std::string path = CST(std::string,cst::MOBDEC_DATA_PATH)
+    std::string path = CST(std::string,cst::MOBDEC_RESULT_PATH)
     				 + "/" + CST(std::string,cst::PROJECT_NAME)
 					 + "/" + component_name
 					 + "/super_pixel_region_confidence_value_%03d.png";
@@ -541,7 +541,7 @@ void DataWriter::paintSlicSuperPixelRegionWithConfidenceValueBis(const Data* dat
     }
 
     char buffer[500];
-    std::string path = CST(std::string,cst::MOBDEC_DATA_PATH)
+    std::string path = CST(std::string,cst::MOBDEC_RESULT_PATH)
     				 + "/" + CST(std::string,cst::PROJECT_NAME)
 					 + "/" + component_name
 					 + "/super_pixel_region_confidence_value_bis_%03d.png";
@@ -581,7 +581,7 @@ void DataWriter::paintTrendBonusMalus(const Data* data,
 	}
 
     char buffer[500];
-    std::string path = CST(std::string,cst::MOBDEC_DATA_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/trend_bonus_malus_value_%03d.png";
+    std::string path = CST(std::string,cst::MOBDEC_RESULT_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/trend_bonus_malus_value_%03d.png";
     sprintf(buffer, path.c_str(), data->getTime());
     cv::imwrite(buffer, current_image);
 }
@@ -626,7 +626,7 @@ void DataWriter::paintTrendClusterBonusMalus(const Data* data,
 	}
 
     char buffer[500];
-    std::string path = CST(std::string,cst::MOBDEC_DATA_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/trend_cluster_bonus_malus_value_%03d.png";
+    std::string path = CST(std::string,cst::MOBDEC_RESULT_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/trend_cluster_bonus_malus_value_%03d.png";
     sprintf(buffer, path.c_str(), data->getTime());
     cv::imwrite(buffer, current_image);
 }
@@ -638,7 +638,7 @@ void DataWriter::writeBlenderFile(const Data* data,
 								  std::string component_name) noexcept
 {
     char buffer[500];
-    std::string path = CST(std::string,cst::MOBDEC_DATA_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/blender_%03d.txt";
+    std::string path = CST(std::string,cst::MOBDEC_RESULT_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/blender_%03d.txt";
     sprintf(buffer, path.c_str(), data->getTime());
 
     std::ofstream file;
@@ -671,7 +671,7 @@ void DataWriter::writeCluster(const Data* data,
 							  const std::vector<std::vector<uint>>& cluster_feature_point_id_list) noexcept
 {
     char buffer[500];
-    std::string path = CST(std::string,cst::MOBDEC_DATA_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/cluster_%03d.txt";
+    std::string path = CST(std::string,cst::MOBDEC_RESULT_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/cluster_%03d.txt";
     sprintf(buffer, path.c_str(), data->getTime());
 
     std::ofstream file;
@@ -701,7 +701,7 @@ void DataWriter::writeConfidenceValue(const Data* data,
                                       std::string component_name) noexcept
 {
     char buffer[500];
-    std::string path = CST(std::string,cst::MOBDEC_DATA_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/confidence_value_%03d.txt";
+    std::string path = CST(std::string,cst::MOBDEC_RESULT_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/confidence_value_%03d.txt";
     sprintf(buffer, path.c_str(), data->getTime());
 
     std::ofstream file;
@@ -720,7 +720,7 @@ void DataWriter::writeDistanceToCamera(const Data* data,
                                        std::string component_name) noexcept
 {
     char buffer[500];
-    std::string path = CST(std::string,cst::MOBDEC_DATA_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/distance_to_camera_%03d.txt";
+    std::string path = CST(std::string,cst::MOBDEC_RESULT_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/distance_to_camera_%03d.txt";
     sprintf(buffer, path.c_str(), data->getTime());
 
     std::ofstream file;
@@ -746,7 +746,7 @@ void DataWriter::writeExtrinsicParameters(const Data* data,
 										  const cv::Mat& translation) noexcept
 {
     char buffer[500];
-    std::string path = CST(std::string,cst::MOBDEC_DATA_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/extrinsic_parameters_%03d.txt";
+    std::string path = CST(std::string,cst::MOBDEC_RESULT_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/extrinsic_parameters_%03d.txt";
     sprintf(buffer, path.c_str(), data->getTime());
 
     std::ofstream file;
@@ -784,7 +784,7 @@ void DataWriter::writeFeaturePointPosition(const Data* data,
                                    	   	   std::string component_name) noexcept
 {
     char buffer[500];
-    std::string path = CST(std::string,cst::MOBDEC_DATA_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/feature_point_position_%03d.txt";
+    std::string path = CST(std::string,cst::MOBDEC_RESULT_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/feature_point_position_%03d.txt";
     sprintf(buffer, path.c_str(), data->getTime());
 
     std::ofstream file;
@@ -808,7 +808,7 @@ void DataWriter::writeFeaturePointPositionAge(const Data* data,
                                    	   	   	  std::string component_name) noexcept
 {
     char buffer[500];
-    std::string path = CST(std::string,cst::MOBDEC_DATA_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/feature_point_position_age_%03d.txt";
+    std::string path = CST(std::string,cst::MOBDEC_RESULT_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/feature_point_position_age_%03d.txt";
     sprintf(buffer, path.c_str(), data->getTime());
 
     std::ofstream file;
@@ -833,7 +833,7 @@ void DataWriter::writeLabel(const Data* data,
                             std::string component_name) noexcept
 {
     char buffer[500];
-    std::string path = CST(std::string,cst::MOBDEC_DATA_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/label_%03d.txt";
+    std::string path = CST(std::string,cst::MOBDEC_RESULT_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/label_%03d.txt";
     sprintf(buffer, path.c_str(), data->getTime());
 
     std::ofstream file;
@@ -853,7 +853,7 @@ void DataWriter::writeMedianScale(const Data* data,
                                   double median_scale) noexcept
 {
     char buffer[500];
-    std::string path = CST(std::string,cst::MOBDEC_DATA_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/median_scale_%03d.txt";
+    std::string path = CST(std::string,cst::MOBDEC_RESULT_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/median_scale_%03d.txt";
     sprintf(buffer, path.c_str(), data->getTime());
 
     std::ofstream file;
@@ -872,7 +872,7 @@ void DataWriter::writeState(const Data* data,
                             std::string state) noexcept
 {
     char buffer[500];
-    std::string path = CST(std::string,cst::MOBDEC_DATA_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/state_%03d.txt";
+    std::string path = CST(std::string,cst::MOBDEC_RESULT_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/state_%03d.txt";
     sprintf(buffer, path.c_str(), data->getTime());
 
     std::ofstream file;
@@ -890,7 +890,7 @@ void DataWriter::writeStaticFeaturePointPositionAtT(const Data* data,
                                    	   	   	        std::string component_name) noexcept
 {
     char buffer[500];
-    std::string path = CST(std::string,cst::MOBDEC_DATA_PATH) + "/"
+    std::string path = CST(std::string,cst::MOBDEC_RESULT_PATH) + "/"
     				 + CST(std::string,cst::PROJECT_NAME) + "/"
 					 + component_name
 					 + "/static_feature_point_position_t_%03d.txt";
@@ -920,7 +920,7 @@ void DataWriter::writeStaticFeaturePointPositionAtTMDelta(const Data* data,
                                    	   	   	        	  std::string component_name) noexcept
 {
     char buffer[500];
-    std::string path = CST(std::string,cst::MOBDEC_DATA_PATH) + "/"
+    std::string path = CST(std::string,cst::MOBDEC_RESULT_PATH) + "/"
     				 + CST(std::string,cst::PROJECT_NAME) + "/"
 					 + component_name
 					 + "/static_feature_point_position_tmdelta_%03d.txt";
@@ -952,7 +952,7 @@ void DataWriter::writeTrendBonusMalus(const Data* data,
 									  const std::vector<double>& bonus_malus_value) noexcept
 {
     char buffer[500];
-    std::string path = CST(std::string,cst::MOBDEC_DATA_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/trend_bonus_malus_value_%03d.txt";
+    std::string path = CST(std::string,cst::MOBDEC_RESULT_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/trend_bonus_malus_value_%03d.txt";
     sprintf(buffer, path.c_str(), data->getTime());
 
     std::ofstream file;
@@ -978,7 +978,7 @@ void DataWriter::writeTrendClusterBonusMalus(const Data* data,
 											 const std::vector<double>& cluster_bonus_malus_value) noexcept
 {
     char buffer[500];
-    std::string path = CST(std::string,cst::MOBDEC_DATA_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/trend_cluster_bonus_malus_value_%03d.txt";
+    std::string path = CST(std::string,cst::MOBDEC_RESULT_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/trend_cluster_bonus_malus_value_%03d.txt";
     sprintf(buffer, path.c_str(), data->getTime());
 
     std::ofstream file;

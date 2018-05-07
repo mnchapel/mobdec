@@ -31,7 +31,7 @@ enum class cst : int{
 
 	// INPUT DATA
 	PROJECT_NAME,					// Name of the project
-	MOBDEC_DATA_PATH,				// Path to the result file
+    MOBDEC_RESULT_PATH,				// Path to the result folder
 	TEMPLATE_IMAGE_PATH,			// Path to the images of the video sequence
 	TEMPLATE_GT_IMAGE_PATH,			// Path to the ground truth images of the video sequence
 

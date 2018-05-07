@@ -13,7 +13,7 @@ void DataReader::readConfidenceValue(Data* data,
 		 	 	 	   	  	  	  	 std::string component_name) noexcept
 {
     char buffer[500];
-    std::string path = CST(std::string,cst::MOBDEC_DATA_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/confidence_value_%03d.txt";
+    std::string path = CST(std::string,cst::MOBDEC_RESULT_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/confidence_value_%03d.txt";
     sprintf(buffer, path.c_str(), data->getTime());
 
     std::ifstream file;
@@ -44,7 +44,7 @@ void DataReader::readDistanceToCameraAfterScale(uint time,
 												std::string component_name) noexcept
 {
     char buffer[500];
-    std::string path = CST(std::string,cst::MOBDEC_DATA_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/distance_to_camera_after_scale_%03d.txt";
+    std::string path = CST(std::string,cst::MOBDEC_RESULT_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/distance_to_camera_after_scale_%03d.txt";
     sprintf(buffer, path.c_str(), time);
 
     std::ifstream file;
@@ -68,7 +68,7 @@ void DataReader::readFeaturePoint(Data* data,
 		 	 	 	 	 	 	  std::string component_name) noexcept
 {
     char buffer[500];
-    std::string path = CST(std::string,cst::MOBDEC_DATA_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/feature_point_%03d.txt";
+    std::string path = CST(std::string,cst::MOBDEC_RESULT_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/feature_point_%03d.txt";
     sprintf(buffer, path.c_str(), data->getTime());
 
     std::ifstream file;
@@ -105,7 +105,7 @@ void DataReader::readFeaturePoint(uint time,
 		 	 	 	 	 	 	  std::string component_name) noexcept
 {
     char buffer[500];
-    std::string path = CST(std::string,cst::MOBDEC_DATA_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/feature_point_%03d.txt";
+    std::string path = CST(std::string,cst::MOBDEC_RESULT_PATH) + "/" + CST(std::string,cst::PROJECT_NAME) + "/" + component_name + "/feature_point_%03d.txt";
     sprintf(buffer, path.c_str(), time);
 
     std::ifstream file;

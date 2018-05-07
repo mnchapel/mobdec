@@ -27,9 +27,8 @@ void Data::addNewFeaturePoint(cv::Mat& position_2d) noexcept
 {
 	uint free_index = findFirstFeaturePointFreeSpace();
 
-	assert(free_index != uint(-1));
-
-    feature_point.at(free_index) = std::move(FeaturePoint(position_2d));
+    assert(free_index != uint(-1));
+    feature_point.at(free_index) = (FeaturePoint(position_2d));
 }
 
 
@@ -60,8 +59,7 @@ void Data::featurePointReturnToSave(uint id,
 
 	if(feature_point[id].getLabel() == 'S'
 	&& !has_match)
-	{
-//		std::cout << "remove " << id << std::endl;
+    {
 		removeStaticPoint(id);
 		deleteFeaturePoint(id);
 	}
@@ -436,9 +434,19 @@ bool Data::isFeaturePoint(uint id) const noexcept
 //---------------------------------------------------------------------------------------
 bool Data::isFeaturePointOld(uint id) const noexcept
 {
-	if(feature_point[id].getAge()> CST(int,cst::DELTA))
+    if(feature_point[id].getAge()>CST(int,cst::DELTA))
 		return true;
 	return false;
+}
+
+
+
+//---------------------------------------------------------------------------------------
+bool Data::isFeaturePointFeatureTrackerOld(uint id) const noexcept
+{
+    if(feature_point[id].getAge()>1)
+        return true;
+    return false;
 }
 
 

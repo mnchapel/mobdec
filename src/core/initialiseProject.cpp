@@ -11,15 +11,15 @@
 //---------------------------------------------------------------------------------------
 void InitialiseProject::copyConfigurationFileInResultFolder(std::string configuration_file_path) noexcept
 {
-	std::string mobdec_data_path = CST(std::string,cst::MOBDEC_DATA_PATH);
+    std::string mobdec_result_path = CST(std::string,cst::MOBDEC_RESULT_PATH);
 	std::string project_name = CST(std::string,cst::PROJECT_NAME);
 
 	int dummy;
 	std::string command_copy;
-	std::string result_folder_path = mobdec_data_path + "/" + project_name + "/";
+    std::string result_folder_path = mobdec_result_path + "/" + project_name + "/";
 
 	command_copy = "cp " + configuration_file_path + " " + result_folder_path;
-	dummy = system(command_copy.c_str());
+    dummy = system(command_copy.c_str());
 }
 
 
@@ -41,7 +41,7 @@ void InitialiseProject::createResultFolder() noexcept
 			int dummy;
 
 			std::string module_name = cycles[i][j];
-			std::string component_image_directory = CST(std::string,cst::MOBDEC_DATA_PATH)
+            std::string component_image_directory = CST(std::string,cst::MOBDEC_RESULT_PATH)
 												  + "/" + CST(std::string,cst::PROJECT_NAME)
 												  + "/" + module_name + "/";
 

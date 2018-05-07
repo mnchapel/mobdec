@@ -16,7 +16,9 @@ LifeCycleManager::LifeCycleManager(int end_time_cycle,
 
     for(std::string phase_name: list_phase)
     {
-		if(phase_name == "CombiningGeometricConstraintOpticalFlow")
+        if(phase_name == "AnmsDetector")
+            phases.emplace_back(new AnmsDetector);
+        else if(phase_name == "CombiningGeometricConstraintOpticalFlow")
             phases.emplace_back(new CombiningGeometricConstraintOpticalFlow);
 		else if(phase_name == "R_CombiningGeometricConstraintOpticalFlow")
         // 	phases.emplace_back(new CombiningGeometricConstraintOpticalFlow{true});
@@ -28,6 +30,10 @@ LifeCycleManager::LifeCycleManager(int end_time_cycle,
             phases.emplace_back(new EssentialMatrixKMeans);
         else if(phase_name == "FalseNegativeSuppression")
             phases.emplace_back(new FalseNegativeSuppression);
+        else if(phase_name == "FastDetector")
+            phases.emplace_back(new FastDetector);
+        else if(phase_name == "KltTracker")
+            phases.emplace_back(new KltTracker);
         else if(phase_name == "KMeansOpticalFlow")
             phases.emplace_back(new KMeansOpticalFlow);
         else if(phase_name == "LabelingFeaturePoint")

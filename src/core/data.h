@@ -162,6 +162,15 @@ public:
 
 
 
+    /// @brief
+    ///
+    /// @param id: the id of the feature point.
+    ///
+    /// @return
+    bool isFeaturePointFeatureTrackerOld(uint id) const noexcept;
+
+
+
 	/// @brief
 	///
 	/// @param id:
